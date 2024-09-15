@@ -1,15 +1,16 @@
 return {
 	{
 		"navarasu/onedark.nvim",
-		name="theme",
-		priority = 1001,
-		config= function()
-			require("onedark").setup({
-				style = 'deep', -- Default theme style. Choose between 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer' and 'light'
-				transparent = false,  -- Show/hide background
-				term_colors = true, -- Change terminal color as per the selected theme style
-				ending_tildes = false, -- Show the end-of-buffer tildes. By default they are hidden
-				cmp_itemkind_reverse = false, -- reverse item kind highlights in cmp menu
+			lazy = false,
+			name = "theme",
+			priority = 1000,
+			config= function()
+				require("onedark").setup({
+						style = 'deep', -- Default theme style. Choose between 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer' and 'light'
+						transparent = false,  -- Show/hide background
+						term_colors = true, -- Change terminal color as per the selected theme style
+						ending_tildes = false, -- Show the end-of-buffer tildes. By default they are hidden
+						cmp_itemkind_reverse = false, -- reverse item kind highlights in cmp menu
 
 				-- toggle theme style ---
 				toggle_style_key = nil, -- keybind to toggle theme style. Leave it nil to disable it, or set it to a string, for example "<leader>ts"
@@ -21,7 +22,7 @@ return {
 				code_style = {
 					comments = 'italic',
 					keywords = 'none',
-					functions = 'none',
+					functions = 'none',	
 					strings = 'none',
 					variables = 'none'
 				},
@@ -45,11 +46,4 @@ return {
 		end,
 
 	}
---	,
---	{
---		"LazyVim/LazyVim",
---		opts = {
---			colorscheme = "onedark",
---		},
---	}
-}
+	}
